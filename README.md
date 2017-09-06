@@ -1,4 +1,5 @@
-# notes-on-composing-software
+# Notes on Composing Software
+
 Notes on Eric Elliot's “Composing Software” series
 
 Original articles by Eric Elliot:
@@ -12,7 +13,5 @@ Original articles by Eric Elliot:
 6.  [Functors & Categories](https://medium.com/javascript-scene/functors-categories-61e031bac53f)
 7.  [Functional Mixins](https://medium.com/javascript-scene/functional-mixins-composing-software-ffb66d5e731c)
 8.  [JavaScript Factory Functions with ES6+](https://medium.com/javascript-scene/javascript-factory-functions-with-es6-4d224591a8b1)
-
-
-
-
+9.  [Why Composition is Harder with Classes](https://medium.com/javascript-scene/why-composition-is-harder-with-classes-c3e627dcd0aa)
+10. [Composable Datatypes with Functions](https://medium.com/javascript-scene/composable-datatypes-with-functions-aec72db3b093)
