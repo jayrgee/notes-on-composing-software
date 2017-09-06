@@ -69,6 +69,8 @@ const censor = words => filter(
   word => word.length !== 4,
   words
 );
+censor(["oops", "gasp", "shout", "sun"]);
+// [ 'shout', 'sun' ]
 
 // With all the common stuff abstracted out, censor() is a tiny function.
 // And so is startsWithS():
@@ -76,6 +78,8 @@ const startsWithS = words => filter(
   word => word.startsWith('s'),
   words
 );
+startsWithS(["oops", "gasp", "shout", "sun"]);
+// [ 'shout', 'sun' ]
 
 // JavaScript has already done this abstraction work for us.
 
