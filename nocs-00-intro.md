@@ -55,16 +55,25 @@ doStuffBetterWithPipe(20);
 
 > When you use `pipe()` (and its twin, `compose()`) You don't need intermediary variables. Writing functions without mention of the arguments is called **point-free style**.
 
+*PFS can help reduce complexity. Reduced complexity has benefits:*
+- *consumes less working memory between the ears*
+- *reduces SNR making it easier to read*
+- *reduces amount of code => less surface area for bugs*
+
+
 ### Composing Objects
 
-Primitives:
+> “Favor object composition over class inheritance”
+(Go4)
+
+*Primitives:*
 
 ```
 const firstName = 'Claude';
 const lastName = 'Debussy';
 ```
 
-A composite:
+*A composite:*
 
 ```
 const fullName = {
@@ -72,6 +81,9 @@ const fullName = {
   lastName
 };
 ```
+
+*Arrays, Sets, Maps, WeakMaps, TypedArrays, etc… are composite datatypes.*
+
 
 > Any time you build any non-primitive data structure, you’re performing some kind of object composition.
 
@@ -106,3 +118,13 @@ const b = {
 };
 const c = {...a, ...b}; // {a: 'a', b: 'b'}
 ```
+
+### Conclusion
+
+It's not about FP vs OOP or which language is best. In the end it's about composing functions and data structures.
+
+These articles focus on FP because functions are easy in JavaScript. The essence of JS?
+
+> We’ll use object composition to produce datatypes for functional programming, and functional programming to produce objects for OOP.
+
+> No matter how you write software, you should compose it well.
