@@ -23,11 +23,34 @@ const doStuffBetter = x => f(g(x));
 doStuffBetter(20); // 42
 ```
 
+*How to debug this form?*
+
+Define a `trace()` utility!
+
+```
+const trace = label => value => {
+  console.log(`${ label }: ${ value }`);
+  return value;
+};
+```
+
+> Popular functional programming libraries like Lodash and Ramda include utilities to make function composition easier.
+
+*...or you can roll your own:*
+
 > `pipe()` creates a pipeline of functions, passing the output of one function to the input of another.
 
 ```
-// pipe(...fns: [...Function]) => x => y
 const pipe = (...fns) => x => fns.reduce((y, f) => f(y), x);
+
+const doStuffBetterWithPipe = pipe(
+  g,
+  trace('after g'),
+  f,
+  trace('after f')
+);
+
+doStuffBetterWithPipe(20);
 ```
 
 > When you use `pipe()` (and its twin, `compose()`) You don't need intermediary variables. Writing functions without mention of the arguments is called **point-free style**.
