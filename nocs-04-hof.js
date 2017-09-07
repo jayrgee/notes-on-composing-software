@@ -1,7 +1,10 @@
-// A higher order function is a function that takes a function as an argument, or returns a function.
+// https://medium.com/javascript-scene/higher-order-functions-composing-software-5365cf2cbe99
 
-// Consider these two first-order functions that filter a list of words using different criteria
-// but still a lot of repeated code
+// A higher order function is a function that takes a function as an argument,
+// or returns a function.
+
+// Consider these two first-order functions that filter a list of words using 
+// different criteria but still a lot of repeated code
 
 const censor = words => {
   const filtered = [];
@@ -31,7 +34,6 @@ startsWithS(["oops", "gasp", "shout", "sun"]);
 
 // They both iterate over a list and filter it on a given condition.
 // This pattern could be abstracted into a more generalisewd solution. 
-
 
 // Note that JavaScript has first-class functions
 
@@ -95,7 +97,8 @@ const highpass = cutoff => n => n >= cutoff;
 const gt3 = highpass(3);
 [1, 2, 3, 4].filter(gt3); // [3, 4];
 
-// In other words, you can use higher order functions to make a function polymorphic.
+// In other words, you can use higher order functions to make a function
+// polymorphic.
 
 // higher order functions can be a whole lot more reusable and versatile than
 // their first order cousins.
