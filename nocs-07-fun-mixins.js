@@ -138,7 +138,6 @@ console.log(duck2.fly().quack());
 // * Avoid the creation of is-a relationships between objects, mixins, or data
 //   types.
 
-// * Avoid implicit dependencies between mixins 
 
 //
 // * “Functional mixins” doesn’t mean “functional programming”.
@@ -149,6 +148,10 @@ console.log(duck2.fly().quack());
 //   properties. ES2017 added Object.getOwnPropertyDescriptors() to get around
 //   this problem.
 //   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+
+
+
+// * Avoid implicit dependencies between mixins 
 
 // example: configuration manager for your app that logs warnings when you try
 // to access configuration properties that don’t exist:
